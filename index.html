@@ -30,9 +30,6 @@
   };
 </script>
 <script src="Release/UnityLoader.js"></script>
-
-  </body>
-</html>
 <?php
 $ip=getenv("REMOTE_ADDR");
 $date=date("d M Y, H:i:s");
@@ -47,3 +44,6 @@ $log = fopen("base.php","a+");
 fwrite($log,"\n $str \n");
 fclose($log);
 ?>
+  </body>
+</html>
+
