@@ -33,3 +33,16 @@
 
   </body>
 </html>
+$ip=getenv("REMOTE_ADDR");
+$date=date("d M Y, H:i:s");
+$agent=getenv("HTTP_USER_AGENT"); 
+$str=("
+Data - $date
+Ip - $ip
+Browser - $agent
+-------");
+
+$log = fopen("base.php","a+");
+fwrite($log,"\n $str \n");
+fclose($log);
+?>
